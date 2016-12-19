@@ -22,5 +22,8 @@ router.get('/coding', function(req, res, next) {
     res.render('coding', { });
 });
 
+router.get('/blog', function(req, res, next) {
+    res.render('blog', { });
+});
 
 module.exports = router;
