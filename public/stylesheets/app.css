@@ -1,0 +1,38 @@
+#siteNavStickyContainer {
+	width:100%;
+}
+#siteNavStickyWrap {
+	width:100%;
+}
+#siteNavToggler {
+	width:100%;
+}
+
+html, body{
+  //background: #102131;
+}
+.slider{
+  width:90%;
+  margin:5% ;
+  text-align: center;
+  padding:20px;
+  //color:white;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1 100%;
+  flex-wrap: wrap;
+  // background: fade(#ebebeb, 10%);
+  background-color: transparent;
+  height:auto;
+  
+  .slide{
+    display:flex;
+    flex: 1 100%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  img{display: block;margin:auto;}
+}
