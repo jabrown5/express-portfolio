@@ -56,8 +56,8 @@
 <br>
 
 
-{{!--   <div class="row" id="content">
- --}}
+  <div class="row" id="content">
+
   {{{body}}}
 
 
@@ -88,8 +88,8 @@
           </ul>
       </div> --}}
 
-{{!-- </div>
- --}}
+</div>
+
 <footer>
   <div class="row expanded callout secondary">
 
@@ -117,7 +117,7 @@
       <ul class="menu vertical">
         <li><a href="https://www.linkedin.com/in/jennifer-brown-b960b737/"><i class="fi-social-linkedin"></i> Linked In</a></li>
         <li><a href="https://github.com/jabrown5"><i class="fi-social-github"></i> Github</a></li>
-        <li><a href="#"><i class="fi-mail"></i> Message Me</a></li>
+        <li><a href="/contact"><i class="fi-mail"></i> Message Me</a></li>
       </ul>
     </div>
 
@@ -154,6 +154,9 @@
 
   <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
   <script src="http://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.0/js/plugins/foundation.abide.min.js"></script>
+
   <script>
       $(document).foundation();
   </script>
@@ -170,8 +173,8 @@ $(document).ready(function(){
   // $('.responsive-slick').slick({
   $('.slider').slick({
     dots: true,
-    infinite: false,
-    speed: 300,
+    // infinite: false,
+    //speed: 300,
     slidesToShow: 3,
     slidesToScroll: 1,
     arrows: true,
@@ -182,8 +185,8 @@ $(document).ready(function(){
         breakpoint: 1024,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 2,
-          infinite: true,
+          slidesToScroll: 1,
+          // infinite: true,
           dots: true,
           arrows: true
         }
@@ -192,7 +195,7 @@ $(document).ready(function(){
         breakpoint: 600,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 2,
+          slidesToScroll: 1,
           arrows: true
         }
       },
