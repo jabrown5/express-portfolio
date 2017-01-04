@@ -1,0 +1,76 @@
+#siteNavStickyContainer {
+	width:100%;
+}
+#siteNavStickyWrap {
+	width:100%;
+}
+#siteNavToggler {
+	width:100%;
+}
+
+html, body{
+  //background: #102131;
+}
+.slider{
+  width:90%;
+  margin:5% ;
+  text-align: center;
+  padding:20px;
+  //color:white;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1 100%;
+  flex-wrap: wrap;
+  // background: fade(#ebebeb, 10%);
+  background-color: transparent;
+  height:auto;
+  
+  .slide{
+    display:flex;
+    flex: 1 100%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  img{display: block;margin:auto;}
+}
+
+
+
+/* Parent Container */
+.content_img{
+ position: relative;
+ width: auto;
+ height: auto;
+ float: auto;
+}
+
+/* Child Text Container */
+.content_img div{
+ position: absolute;
+ bottom: 5%;
+ right: 5%;
+ background: black;
+ color: white;
+ margin-bottom: 5px;
+ font-family: sans-serif;
+ opacity: 0;
+ visibility: hidden;
+ -webkit-transition: visibility 0s, opacity 0.5s linear; 
+ transition: visibility 0s, opacity 0.5s linear;
+}
+
+/* Hover on Parent Container */
+.content_img:hover{
+ cursor: pointer;
+}
+
+.content_img:hover div{
+ width: 90%;
+ height: 100%;
+ padding: 5%;
+ visibility: visible;
+ opacity: 0.7; 
+}

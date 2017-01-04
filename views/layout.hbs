@@ -4,68 +4,77 @@
       <meta charset="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <!--<title>Foundation | Welcome</title>-->
-      <link rel="stylesheet" href="http://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
-    <!--<link rel='stylesheet' href='/stylesheets/style.css' />-->
+      <link rel='stylesheet' href='/stylesheets/normalize.css'>
 
-  </head>
+{{!--       <link rel="stylesheet" href="http://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">  --}}      
+      <link rel="stylesheet" href="/stylesheets/foundation.css"> 
+      <link rel="stylesheet" href="/stylesheets/foundation-icons.css"> 
+
+{{!--       <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.css" />
+ --}}
+
+<link rel="stylesheet" type="text/css" href="/stylesheets/slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="/stylesheets/slick/slick-theme.css"/>
+
+      <link rel="stylesheet" href="/stylesheets/app.css">
+
+{{!--       <link rel="stylesheet" href="/stylesheets/style.css">
+ --}}  </head>
 
 
   <body>
 
+{{!-- STICKY NAV HELP FROM: http://foundation.zurb.com/forum/posts/36690-how-to-create-a-sticky-top-bar-on-foundation-6# --}}
+<div id="siteContainer">
 
-  <!-- Start Top Bar -->
-  <div class="top-bar">
-      <div class="top-bar-left">
-          <ul class="menu">
-              <li class="menu-text">Jennifer Brown</li>
-          </ul>
+  <div id="siteNavStickyContainer" data-sticky-container>
+    <div id="siteNavStickyWrap" class="sticky" data-sticky data-sticky-on="medium" data-anchor="siteContainer" data-margin-top="0" style="width:100%; margin:0">
+
+      <div id="siteNavToggler" class="title-bar" data-responsive-toggle="siteNav" data-hide-for="small" > 
+        <button class="menu-icon" type="button" data-toggle="example-menu"></button>
+        <div class="title-bar-title">Jen Brown</div>
       </div>
-      <div class="top-bar-right">
-          <ul class="menu">
-              <li><a href="/about">About Me</a></li>
-              <li><a href="/contact">Contact</a></li>
-              <li><a href="/data">Data Visualizations</a></li>
-              <li><a href="/coding">Coding Projects</a></li>
-          </ul>
-      </div>
-  </div>
-  <!-- End Top Bar -->
 
-  <div class="callout large primary">
-      <div class="row column text-center">
-          <h1>Jennifer Brown</h1>
-      </div>
-  </div>
-
-
-    <div class="row" id="content">
-
-    {{{body}}}
-
-
-        <div class="medium-3 columns" data-sticky-container>
-            <div class="sticky" data-sticky data-anchor="content">
-            <h4>Navigate</h4>
-            <ul>
-                <li><a href="/about">About Me</a></li>
-                <li><a href="/contact">Contact</a></li>
-                <li><a href="/data">Data Visualizations</a></li>
-                <li><a href="/coding">Coding Projects</a></li>
+      <div id="siteNav" class="top-bar"> 
+        <div class="top-bar-left">
+            <ul class="hide-for-small-only" style="list-style: none;">
+              <li class="menu-text"><a href="/">Jen Brown</a></li>
             </ul>
-
-        <!--<h4>Authors</h4>-->
-        <!--<ul>-->
-        <!--<li><a href="#">Skyler</a></li>-->
-        <!--<li><a href="#">Jesse</a></li>-->
-        <!--<li><a href="#">Mike</a></li>-->
-        <!--<li><a href="#">Holly</a></li>-->
-        <!--</ul>-->
-
-            </div>
         </div>
+        <div class="top-bar-right">
+          <ul class="medium-horizontal vertical dropdown menu" data-dropdown-menu>
+            <li><a href="/">Portfolio</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
     </div>
+  </div>
 
-      <div class="row column">
+<br>
+
+
+  <div class="row" id="content">
+
+  {{{body}}}
+
+
+{{!--   <div class="medium-3 columns" data-sticky-container>
+    <div class="sticky" data-sticky data-anchor="content">
+      <h4>Navigate</h4>
+        <ul>
+          <li><a href="/about">About Me</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/data">Data Visualizations</a></li>
+          <li><a href="/coding">Coding Projects</a></li>
+        </ul>
+      </div>
+    </div>
+  </div> --}}
+
+{{!--       <div class="row column">
           <ul class="pagination" role="navigation" aria-label="Pagination">
               <li class="disabled">Previous</li>
               <li class="current"><span class="show-for-sr">You're on page</span> 1</li>
@@ -77,16 +86,138 @@
               <li><a href="#" aria-label="Page 13">13</a></li>
               <li><a href="#" aria-label="Next page">Next</a></li>
           </ul>
-      </div>
+      </div> --}}
 
+</div>
+
+<footer style="margin-top:5%">
+  <div class="row expanded callout secondary">
+
+    <div class="small-6 columns">
+{{!--       <p class="lead"></p>  --}}      
+      <ul class="menu vertical">
+        <li><a href="/">Portfolio</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </div>
+
+{{!--     <div class="small-6 large-3 columns">
+      <p class="lead">Solar Systems</p>
+      <ul class="menu vertical">
+        <li><a href="#">One</a></li>
+        <li><a href="#">Two</a></li>
+        <li><a href="#">Three</a></li>
+        <li><a href="#">Four</a></li>
+      </ul>
+    </div> --}}
+
+    <div class="small-6 columns">
+{{!--       <p class="lead">Contact</p>  --}}      
+      <ul class="menu vertical">
+        <li><a href="https://www.linkedin.com/in/jennifer-brown-b960b737/"><i class="fi-social-linkedin"></i> Linked In</a></li>
+        <li><a href="https://github.com/jabrown5"><i class="fi-social-github"></i> Github</a></li>
+        <li><a href="/contact"><i class="fi-mail"></i> Message Me</a></li>
+      </ul>
+    </div>
+
+{{!--     <div class="small-6 large-3 columns">
+      <p class="lead">Offices</p>
+      <ul class="menu vertical">
+        <li><a href="#">One</a></li>
+        <li><a href="#">Two</a></li>
+        <li><a href="#">Three</a></li>
+        <li><a href="#">Four</a></li>
+      </ul>
+    </div> --}}
+
+  </div>
+  <div class="row">
+
+{{!--     <div class="medium-6 columns">
+      <ul class="menu">
+        <li><a href="#">Legal</a></li>
+        <li><a href="#">Partner</a></li>
+        <li><a href="#">Explore</a></li>
+      </ul>
+    </div>
+ --}}
+    <div class="large-6 columns">
+      <ul class="menu float-left">
+        <li class="menu-text">Copyright 2016 - Jennifer Brown</li>
+      </ul>
+    </div>
+  </div>
+
+</footer>
 
 
   <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
   <script src="http://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.0/js/plugins/foundation.abide.min.js"></script>
+
   <script>
       $(document).foundation();
   </script>
 
+<!--  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script> 
+-->
+
+
+<script type="text/javascript" src="/stylesheets/slick/slick.min.js"></script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+  // $('.responsive-slick').slick({
+  $('.slider').slick({
+    dots: true,
+    // infinite: false,
+    //speed: 300,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    arrows: true,
+    prevArrow: "<button type='button' class='slick-prev'>Previous</button>",
+    nextArrow: "<button type='button' class='slick-next'>Next</button>",
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          // infinite: true,
+          dots: true,
+          arrows: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          arrows: true
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: true
+        }
+      }
+      // You can unslick at a given breakpoint now by adding:
+      // settings: "unslick"
+      // instead of a settings object
+    ]
+  });
+
+// $('.slider').slick({});
+
+
+});
+</script>
 
   </body>
 

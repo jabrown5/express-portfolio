@@ -1,8 +1,12 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
-
-a {
-  color: #00B7FF; }
-
-/*# sourceMappingURL=style.css.map */
+#siteNavStickyContainer {
+	width:100%;
+}
+#siteNavStickyWrap {
+	width:100%;
+}
+#siteNavToggler {
+	width:100%;
+}
+.slick-prev:before, .slick-next:before{
+    color:red;
+}

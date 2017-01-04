@@ -1,0 +1,48 @@
+---
+title: "NFL Arrest data: 2001-2016"
+date: 2016-12-15
+blurb: My first exercise in learning D3 was to visualize the arrests of NFL players by offense, team, and time.  I used publicly available data housed at http://nflarrest.com/api/.
+thumbnail: "../images/nfl-arrests-thumb.png"
+
+---
+
+<style>
+    .bar{
+        fill: steelblue;
+    }
+    .bar:hover{
+        fill: brown;
+    }
+    .axis {
+        font: 10px sans-serif;
+    }
+    .axis path,
+    .axis line {
+        fill: none;
+        stroke: #000;
+        shape-rendering: crispEdges;
+    }
+    .axis--x path {
+        display: none;
+    }
+    .line {
+        fill: none;
+        stroke: steelblue;
+        stroke-width: 1.5px;
+    }
+</style>
+
+
+<div id="viz1"></div>
+
+<div id="viz2"></div>
+
+<div id="viz3"></div>
+
+<div id="viz4"></div>
+
+
+
+
+<script src="http://d3js.org/d3.v3.js"></script>
+<script type="text/javascript" src="../javascripts/app.js"></script>
