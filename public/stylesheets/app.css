@@ -36,3 +36,41 @@ html, body{
   
   img{display: block;margin:auto;}
 }
+
+
+
+/* Parent Container */
+.content_img{
+ position: relative;
+ width: auto;
+ height: auto;
+ float: auto;
+}
+
+/* Child Text Container */
+.content_img div{
+ position: absolute;
+ bottom: 5%;
+ right: 5%;
+ background: black;
+ color: white;
+ margin-bottom: 5px;
+ font-family: sans-serif;
+ opacity: 0;
+ visibility: hidden;
+ -webkit-transition: visibility 0s, opacity 0.5s linear; 
+ transition: visibility 0s, opacity 0.5s linear;
+}
+
+/* Hover on Parent Container */
+.content_img:hover{
+ cursor: pointer;
+}
+
+.content_img:hover div{
+ width: 90%;
+ height: 100%;
+ padding: 5%;
+ visibility: visible;
+ opacity: 0.7; 
+}

@@ -14,6 +14,10 @@ router.get('/contact', function(req, res, next) {
     res.render('contact', { });
 });
 
+router.get('/causes', function(req, res, next) {
+    res.render('causes', { });
+});
+
 router.get('/data', function(req, res, next) {
     res.render('data', { });
 });
