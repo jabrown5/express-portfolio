@@ -1,10 +1,10 @@
----
+{{!-- ---
 title: "NFL Arrest data: 2001-2016"
 date: 2016-12-15
 blurb: My first exercise in learning D3 was to visualize the arrests of NFL players by offense, team, and time.  I used publicly available data housed at http://nflarrest.com/api/.
 thumbnail: "../images/nfl-arrests-thumb.png"
 
----
+--- --}}
 
 <style>
     .bar{
@@ -33,6 +33,9 @@ thumbnail: "../images/nfl-arrests-thumb.png"
 </style>
 
 
+<div style="margin-left:5%; margin-right:5%">
+
+
     <h4><b>NFL Arrest Data: 2001 - 2016</b></h4>
 
     <h6><em>Summary</em></h6>
@@ -55,19 +58,27 @@ thumbnail: "../images/nfl-arrests-thumb.png"
     <br>
 
 
-
+<h6><em>Most Common Offense</em></h6>
 <div id="viz1"></div>
+<p></p>
 
+
+<h6><em>Arrests by Franchise</em></h6>
 <div id="viz2"></div>
 
+<h6><em>Number of Arrests by Minnesota Vikings Player</em></h6>
 <div id="viz3"></div>
 
-<div id="viz4"></div>
 
+{{!-- <div id="viz4"></div>
+ --}}
 
     <h6><em>Caveats</em></h6>
 
     <p>Please remember that this is only arrest data and should not be considered the definitive word on criminal activity among NFL players. It is possible that an arrest never resulted in any charges.  Additionally, some criminal activity is undetected so some crimes or players may go unreported.</p>
+
+</div>
+
 
 <script src="https://d3js.org/d3.v3.js"></script>
 <script type="text/javascript" src="../javascripts/app.js"></script>
