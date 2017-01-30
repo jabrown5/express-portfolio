@@ -367,7 +367,7 @@ var time = [
 // DRUGS
     {"Month":"4","Year":"2000","arrest_count":"1"},{"Month":"5","Year":"2000","arrest_count":"1"},{"Month":"6","Year":"2000","arrest_count":"1"},{"Month":"8","Year":"2000","arrest_count":"1"},{"Month":"5","Year":"2001","arrest_count":"1"},{"Month":"9","Year":"2001","arrest_count":"1"},{"Month":"11","Year":"2001","arrest_count":"2"},{"Month":"12","Year":"2001","arrest_count":"1"},{"Month":"7","Year":"2002","arrest_count":"1"},{"Month":"2","Year":"2003","arrest_count":"1"},{"Month":"5","Year":"2003","arrest_count":"2"},{"Month":"6","Year":"2003","arrest_count":"1"},{"Month":"2","Year":"2004","arrest_count":"1"},{"Month":"3","Year":"2004","arrest_count":"1"},{"Month":"12","Year":"2005","arrest_count":"1"},{"Month":"1","Year":"2006","arrest_count":"1"},{"Month":"2","Year":"2006","arrest_count":"1"},{"Month":"3","Year":"2006","arrest_count":"1"},{"Month":"7","Year":"2006","arrest_count":"1"},{"Month":"9","Year":"2006","arrest_count":"1"},{"Month":"10","Year":"2006","arrest_count":"1"},{"Month":"1","Year":"2007","arrest_count":"1"},{"Month":"2","Year":"2007","arrest_count":"1"},{"Month":"3","Year":"2007","arrest_count":"1"},{"Month":"6","Year":"2007","arrest_count":"1"},{"Month":"7","Year":"2007","arrest_count":"1"},{"Month":"12","Year":"2007","arrest_count":"2"},{"Month":"2","Year":"2008","arrest_count":"3"},{"Month":"3","Year":"2008","arrest_count":"2"},{"Month":"4","Year":"2008","arrest_count":"2"},{"Month":"6","Year":"2008","arrest_count":"1"},{"Month":"7","Year":"2008","arrest_count":"2"},{"Month":"8","Year":"2008","arrest_count":"1"},{"Month":"9","Year":"2008","arrest_count":"1"},{"Month":"10","Year":"2008","arrest_count":"1"},{"Month":"11","Year":"2008","arrest_count":"1"},{"Month":"1","Year":"2009","arrest_count":"1"},{"Month":"2","Year":"2009","arrest_count":"1"},{"Month":"8","Year":"2009","arrest_count":"1"},{"Month":"12","Year":"2009","arrest_count":"1"},{"Month":"5","Year":"2010","arrest_count":"1"},{"Month":"10","Year":"2010","arrest_count":"1"},{"Month":"3","Year":"2011","arrest_count":"1"},{"Month":"4","Year":"2011","arrest_count":"1"},{"Month":"5","Year":"2011","arrest_count":"1"},{"Month":"6","Year":"2011","arrest_count":"2"},{"Month":"10","Year":"2011","arrest_count":"1"},{"Month":"11","Year":"2011","arrest_count":"1"},{"Month":"12","Year":"2011","arrest_count":"1"},{"Month":"1","Year":"2012","arrest_count":"2"},{"Month":"2","Year":"2012","arrest_count":"4"},{"Month":"3","Year":"2012","arrest_count":"1"},{"Month":"4","Year":"2012","arrest_count":"1"},{"Month":"7","Year":"2012","arrest_count":"1"},{"Month":"10","Year":"2012","arrest_count":"1"},{"Month":"2","Year":"2013","arrest_count":"1"},{"Month":"4","Year":"2013","arrest_count":"2"},{"Month":"8","Year":"2013","arrest_count":"1"},{"Month":"11","Year":"2013","arrest_count":"2"},{"Month":"12","Year":"2013","arrest_count":"1"},{"Month":"1","Year":"2014","arrest_count":"1"},{"Month":"2","Year":"2014","arrest_count":"1"},{"Month":"3","Year":"2014","arrest_count":"1"},{"Month":"5","Year":"2014","arrest_count":"1"},{"Month":"7","Year":"2014","arrest_count":"2"},{"Month":"8","Year":"2014","arrest_count":"3"},{"Month":"1","Year":"2015","arrest_count":"1"},{"Month":"2","Year":"2015","arrest_count":"2"},{"Month":"12","Year":"2015","arrest_count":"1"},{"Month":"2","Year":"2016","arrest_count":"1"},{"Month":"3","Year":"2016","arrest_count":"2"},
 // ASSAULT
-    {"Month":"7","Year":"2000","arrest_count":"1"},{"Month":"9","Year":"2000","arrest_count":"1"},{"Month":"2","Year":"2001","arrest_count":"1"},{"Month":"3","Year":"2001","arrest_count":"1"},{"Month":"7","Year":"2001","arrest_count":"1"},{"Month":"12","Year":"2001","arrest_count":"1"},{"Month":"5","Year":"2002","arrest_count":"1"},{"Month":"7","Year":"2002","arrest_count":"1"},{"Month":"11","Year":"2002","arrest_count":"1"},{"Month":"3","Year":"2003","arrest_count":"1"},{"Month":"10","Year":"2003","arrest_count":"1"},{"Month":"6","Year":"2004","arrest_count":"3"},{"Month":"10","Year":"2004","arrest_count":"1"},{"Month":"11","Year":"2004","arrest_count":"1"},{"Month":"7","Year":"2005","arrest_count":"1"},{"Month":"2","Year":"2006","arrest_count":"2"},{"Month":"4","Year":"2006","arrest_count":"1"},{"Month":"10","Year":"2006","arrest_count":"1"},{"Month":"12","Year":"2006","arrest_count":"1"},{"Month":"1","Year":"2007","arrest_count":"1"},{"Month":"3","Year":"2007","arrest_count":"1"},{"Month":"5","Year":"2007","arrest_count":"2"},{"Month":"7","Year":"2007","arrest_count":"1"},{"Month":"12","Year":"2007","arrest_count":"1"},{"Month":"2","Year":"2008","arrest_count":"1"},{"Month":"3","Year":"2008","arrest_count":"1"},{"Month":"4","Year":"2008","arrest_count":"1"},{"Month":"5","Year":"2008","arrest_count":"1"},{"Month":"6","Year":"2008","arrest_count":"1"},{"Month":"10","Year":"2008","arrest_count":"1"},{"Month":"12","Year":"2008","arrest_count":"1"},{"Month":"5","Year":"2009","arrest_count":"1"},{"Month":"6","Year":"2009","arrest_count":"1"},{"Month":"8","Year":"2009","arrest_count":"2"},{"Month":"10","Year":"2009","arrest_count":"2"},{"Month":"11","Year":"2009","arrest_count":"1"},{"Month":"4","Year":"2010","arrest_count":"1"},{"Month":"6","Year":"2010","arrest_count":"2"},{"Month":"10","Year":"2010","arrest_count":"1"},{"Month":"1","Year":"2011","arrest_count":"1"},{"Month":"2","Year":"2011","arrest_count":"1"},{"Month":"6","Year":"2011","arrest_count":"1"},{"Month":"7","Year":"2011","arrest_count":"2"},{"Month":"11","Year":"2011","arrest_count":"1"},{"Month":"12","Year":"2011","arrest_count":"1"},{"Month":"2","Year":"2012","arrest_count":"1"},{"Month":"4","Year":"2012","arrest_count":"1"},{"Month":"3","Year":"2013","arrest_count":"1"},{"Month":"6","Year":"2013","arrest_count":"1"},{"Month":"12","Year":"2013","arrest_count":"1"},{"Month":"1","Year":"2014","arrest_count":"1"},{"Month":"4","Year":"2014","arrest_count":"1"},{"Month":"5","Year":"2014","arrest_count":"1"},{"Month":"7","Year":"2014","arrest_count":"1"},{"Month":"10","Year":"2014","arrest_count":"1"},{"Month":"2","Year":"2015","arrest_count":"1"},{"Month":"7","Year":"2015","arrest_count":"1"},{"Month":"1","Year":"2016","arrest_count":"1"},{"Month":"7","Year":"2016","arrest_count":"1"},{"Month":"9","Year":"2016","arrest_count":"1"},
+    {"Month":"7","Year":"2000","arrest_count":"1"},{"Month":"9","Year":"2000","arrest_count":"1"},{"Month":"2","Year":"2001","arrest_count":"1"},{"Month":"3","Year":"2001","arrest_count":"1"},{"Month":"7","Year":"2001","arrest_count":"1"},{"Month":"12","Year":"2001","arrest_count":"1"},{"Month":"5","Year":"2002","arrest_count":"1"},{"Month":"7","Year":"2002","arrest_count":"1"},{"Month":"11","Year":"2002","arrest_count":"1"},{"Month":"3","Year":"2003","arrest_count":"1"},{"Month":"10","Year":"2003","arrest_count":"1"},{"Month":"6","Year":"2004","arrest_count":"3"},{"Month":"10","Year":"2004","arrest_count":"1"},{"Month":"11","Year":"2004","arrest_count":"1"},{"Month":"7","Year":"2005","arrest_count":"1"},{"Month":"2","Year":"2006","arrest_count":"2"},{"Month":"4","Year":"2006","arrest_count":"1"},{Month: "5",Year: "2006",arrest_count: "1"},{"Month":"10","Year":"2006","arrest_count":"1"},{"Month":"12","Year":"2006","arrest_count":"1"},{"Month":"1","Year":"2007","arrest_count":"1"},{"Month":"3","Year":"2007","arrest_count":"1"},{"Month":"5","Year":"2007","arrest_count":"2"},{"Month":"7","Year":"2007","arrest_count":"1"},{"Month":"12","Year":"2007","arrest_count":"1"},{"Month":"2","Year":"2008","arrest_count":"1"},{"Month":"3","Year":"2008","arrest_count":"1"},{"Month":"4","Year":"2008","arrest_count":"1"},{"Month":"5","Year":"2008","arrest_count":"1"},{"Month":"6","Year":"2008","arrest_count":"1"},{"Month":"10","Year":"2008","arrest_count":"1"},{"Month":"12","Year":"2008","arrest_count":"1"},{"Month":"5","Year":"2009","arrest_count":"1"},{"Month":"6","Year":"2009","arrest_count":"1"},{"Month":"8","Year":"2009","arrest_count":"2"},{"Month":"10","Year":"2009","arrest_count":"2"},{"Month":"11","Year":"2009","arrest_count":"1"},{"Month":"4","Year":"2010","arrest_count":"1"},{"Month":"6","Year":"2010","arrest_count":"2"},{"Month":"10","Year":"2010","arrest_count":"1"},{"Month":"1","Year":"2011","arrest_count":"1"},{"Month":"2","Year":"2011","arrest_count":"1"},{"Month":"6","Year":"2011","arrest_count":"1"},{"Month":"7","Year":"2011","arrest_count":"2"},{"Month":"11","Year":"2011","arrest_count":"1"},{"Month":"12","Year":"2011","arrest_count":"1"},{"Month":"2","Year":"2012","arrest_count":"1"},{"Month":"4","Year":"2012","arrest_count":"1"},{"Month":"3","Year":"2013","arrest_count":"1"},{"Month":"6","Year":"2013","arrest_count":"1"},{"Month":"12","Year":"2013","arrest_count":"1"},{"Month":"1","Year":"2014","arrest_count":"1"},{"Month":"4","Year":"2014","arrest_count":"1"},{"Month":"5","Year":"2014","arrest_count":"1"},{"Month":"7","Year":"2014","arrest_count":"1"},{"Month":"10","Year":"2014","arrest_count":"1"},{"Month":"2","Year":"2015","arrest_count":"1"},{"Month":"7","Year":"2015","arrest_count":"1"},{"Month":"1","Year":"2016","arrest_count":"1"},{"Month":"7","Year":"2016","arrest_count":"1"},{"Month":"9","Year":"2016","arrest_count":"1"},
 // Disorderly conduct
     {"Month":"2","Year":"2000","arrest_count":"2"},{"Month":"3","Year":"2000","arrest_count":"1"},{"Month":"6","Year":"2001","arrest_count":"1"},{"Month":"7","Year":"2001","arrest_count":"1"},{"Month":"8","Year":"2001","arrest_count":"1"},{"Month":"9","Year":"2001","arrest_count":"1"},{"Month":"2","Year":"2003","arrest_count":"1"},{"Month":"4","Year":"2003","arrest_count":"1"},{"Month":"7","Year":"2003","arrest_count":"2"},{"Month":"6","Year":"2004","arrest_count":"2"},{"Month":"7","Year":"2005","arrest_count":"1"},{"Month":"9","Year":"2005","arrest_count":"2"},{"Month":"1","Year":"2006","arrest_count":"1"},{"Month":"2","Year":"2006","arrest_count":"1"},{"Month":"3","Year":"2006","arrest_count":"1"},{"Month":"5","Year":"2006","arrest_count":"2"},{"Month":"4","Year":"2007","arrest_count":"2"},{"Month":"6","Year":"2007","arrest_count":"2"},{"Month":"3","Year":"2008","arrest_count":"1"},{"Month":"6","Year":"2008","arrest_count":"1"},{"Month":"8","Year":"2008","arrest_count":"1"},{"Month":"2","Year":"2009","arrest_count":"2"},{"Month":"4","Year":"2009","arrest_count":"1"},{"Month":"5","Year":"2010","arrest_count":"1"},{"Month":"9","Year":"2010","arrest_count":"1"},{"Month":"12","Year":"2010","arrest_count":"1"},{"Month":"3","Year":"2011","arrest_count":"1"},{"Month":"3","Year":"2012","arrest_count":"1"},{"Month":"8","Year":"2012","arrest_count":"1"},{"Month":"4","Year":"2013","arrest_count":"1"},{"Month":"9","Year":"2013","arrest_count":"1"},{"Month":"4","Year":"2014","arrest_count":"2"},{"Month":"7","Year":"2014","arrest_count":"1"},
 // Gun
@@ -379,7 +379,1082 @@ var time = [
 // Battery
     {"Month":"6","Year":"2000","arrest_count":"1"},{"Month":"6","Year":"2002","arrest_count":"1"},{"Month":"7","Year":"2002","arrest_count":"1"},{"Month":"8","Year":"2005","arrest_count":"1"},{"Month":"3","Year":"2006","arrest_count":"1"},{"Month":"3","Year":"2007","arrest_count":"1"},{"Month":"6","Year":"2007","arrest_count":"1"},{"Month":"12","Year":"2007","arrest_count":"1"},{"Month":"2","Year":"2008","arrest_count":"1"},{"Month":"4","Year":"2008","arrest_count":"1"},{"Month":"7","Year":"2008","arrest_count":"1"},{"Month":"4","Year":"2009","arrest_count":"1"},{"Month":"5","Year":"2010","arrest_count":"1"},{"Month":"3","Year":"2012","arrest_count":"1"},{"Month":"11","Year":"2012","arrest_count":"1"},{"Month":"3","Year":"2014","arrest_count":"1"},{"Month":"7","Year":"2014","arrest_count":"1"},
 // Reckless driving
-    {"Month":"2","Year":"2002","arrest_count":"1"},{"Month":"7","Year":"2002","arrest_count":"1"},{"Month":"11","Year":"2004","arrest_count":"1"},{"Month":"5","Year":"2005","arrest_count":"1"},{"Month":"5","Year":"2006","arrest_count":"1"},{"Month":"8","Year":"2007","arrest_count":"1"},{"Month":"9","Year":"2007","arrest_count":"1"},{"Month":"5","Year":"2008","arrest_count":"2"},{"Month":"1","Year":"2009","arrest_count":"1"},{"Month":"3","Year":"2009","arrest_count":"1"},{"Month":"8","Year":"2010","arrest_count":"1"},{"Month":"4","Year":"2013","arrest_count":"1"},{"Month":"5","Year":"2014","arrest_count":"1"},{"Month":"3","Year":"2016","arrest_count":"2"},{"Month":"4","Year":"2016","arrest_count":"1"}
+    {"Month":"2","Year":"2002","arrest_count":"1"},{"Month":"7","Year":"2002","arrest_count":"1"},{"Month":"11","Year":"2004","arrest_count":"1"},{"Month":"5","Year":"2005","arrest_count":"1"},{"Month":"5","Year":"2006","arrest_count":"1"},{"Month":"8","Year":"2007","arrest_count":"1"},{"Month":"9","Year":"2007","arrest_count":"1"},{"Month":"5","Year":"2008","arrest_count":"2"},{"Month":"1","Year":"2009","arrest_count":"1"},{"Month":"3","Year":"2009","arrest_count":"1"},{"Month":"8","Year":"2010","arrest_count":"1"},{"Month":"4","Year":"2013","arrest_count":"1"},{"Month":"5","Year":"2014","arrest_count":"1"},{"Month":"3","Year":"2016","arrest_count":"2"},{"Month":"4","Year":"2016","arrest_count":"1"},
+
+// Alcohol
+{Month: "12", Year: "2001",arrest_count: "1"},{Month: "5", Year: "2003",arrest_count: "1"},{Month: "12",Year: "2004",arrest_count: "2"},{Month: "6",Year: "2006",arrest_count: "1"},{Month: "2",Year: "2008",arrest_count: "1"},{Month: "4",Year: "2008",arrest_count: "2"},{Month: "9",Year: "2008",arrest_count: "1"},{Month: "3",Year: "2009",arrest_count: "1"},{Month: "5",Year: "2009",arrest_count: "2"},{Month: "10",Year: "2009",arrest_count: "1"},{Month: "1",Year: "2010",arrest_count: "1"},{Month: "8",Year: "2010",arrest_count: "1"},{Month: "10",Year: "2010",arrest_count: "1"},{Month: "7",Year: "2011",arrest_count: "1"},
+
+// THEFT
+
+{
+Month: "2",
+Year: "2000",
+arrest_count: "2"
+},
+{
+Month: "7",
+Year: "2000",
+arrest_count: "1"
+},
+{
+Month: "8",
+Year: "2000",
+arrest_count: "1"
+},
+{
+Month: "9",
+Year: "2000",
+arrest_count: "2"
+},
+{
+Month: "12",
+Year: "2001",
+arrest_count: "1"
+},
+{
+Month: "10",
+Year: "2002",
+arrest_count: "1"
+},
+{
+Month: "5",
+Year: "2004",
+arrest_count: "1"
+},
+{
+Month: "3",
+Year: "2005",
+arrest_count: "1"
+},
+{
+Month: "6",
+Year: "2006",
+arrest_count: "1"
+},
+{
+Month: "2",
+Year: "2011",
+arrest_count: "1"
+},
+{
+Month: "4",
+Year: "2011",
+arrest_count: "1"
+},
+{
+Month: "5",
+Year: "2011",
+arrest_count: "1"
+},
+{
+Month: "6",
+Year: "2011",
+arrest_count: "1"
+},
+{
+Month: "10",
+Year: "2014",
+arrest_count: "1"
+},
+
+// RESISTING ARREST
+{
+Month: "2",
+Year: "2002",
+arrest_count: "1"
+},
+{
+Month: "4",
+Year: "2004",
+arrest_count: "1"
+},
+{
+Month: "5",
+Year: "2005",
+arrest_count: "1"
+},
+{
+Month: "3",
+Year: "2006",
+arrest_count: "1"
+},
+{
+Month: "4",
+Year: "2006",
+arrest_count: "1"
+},
+{
+Month: "7",
+Year: "2006",
+arrest_count: "1"
+},
+{
+Month: "11",
+Year: "2006",
+arrest_count: "1"
+},
+{
+Month: "8",
+Year: "2007",
+arrest_count: "1"
+},
+{
+Month: "9",
+Year: "2007",
+arrest_count: "1"
+},
+{
+Month: "11",
+Year: "2007",
+arrest_count: "1"
+},
+{
+Month: "7",
+Year: "2012",
+arrest_count: "1"
+},
+{
+Month: "3",
+Year: "2013",
+arrest_count: "1"
+},
+{
+Month: "6",
+Year: "2013",
+arrest_count: "1"
+},
+{
+Month: "1",
+Year: "2014",
+arrest_count: "1"
+},
+{
+Month: "7",
+Year: "2015",
+arrest_count: "1"
+},
+
+// OUTSTANDING WARRENT
+{
+Month: "1",
+Year: "2007",
+arrest_count: "1"
+},
+{
+Month: "4",
+Year: "2007",
+arrest_count: "1"
+},
+{
+Month: "7",
+Year: "2007",
+arrest_count: "1"
+},
+{
+Month: "5",
+Year: "2009",
+arrest_count: "1"
+},
+{
+Month: "6",
+Year: "2011",
+arrest_count: "1"
+},
+{
+Month: "9",
+Year: "2011",
+arrest_count: "1"
+},
+{
+Month: "2",
+Year: "2012",
+arrest_count: "1"
+},
+{
+Month: "7",
+Year: "2013",
+arrest_count: "1"
+},
+{
+Month: "8",
+Year: "2013",
+arrest_count: "1"
+},
+{
+Month: "9",
+Year: "2015",
+arrest_count: "1"
+},
+
+// DUI, DRUGS
+{
+Month: "11",
+Year: "2001",
+arrest_count: "1"
+},
+{
+Month: "3",
+Year: "2002",
+arrest_count: "1"
+},
+{
+Month: "9",
+Year: "2003",
+arrest_count: "1"
+},
+{
+Month: "10",
+Year: "2003",
+arrest_count: "1"
+},
+{
+Month: "5",
+Year: "2006",
+arrest_count: "1"
+},
+{
+Month: "5",
+Year: "2008",
+arrest_count: "1"
+},
+{
+Month: "2",
+Year: "2009",
+arrest_count: "1"
+},
+{
+Month: "7",
+Year: "2012",
+arrest_count: "1"
+},
+{
+Month: "9",
+Year: "2013",
+arrest_count: "1"
+},
+{
+Month: "1",
+Year: "2014",
+arrest_count: "1"
+},
+
+// FAILURE TO APPEAR
+{
+Month: "2",
+Year: "2000",
+arrest_count: "1"
+},
+{
+Month: "11",
+Year: "2002",
+arrest_count: "1"
+},
+{
+Month: "6",
+Year: "2006",
+arrest_count: "1"
+},
+{
+Month: "8",
+Year: "2009",
+arrest_count: "1"
+},
+{
+Month: "3",
+Year: "2013",
+arrest_count: "1"
+},
+{
+Month: "8",
+Year: "2013",
+arrest_count: "1"
+},
+{
+Month: "2",
+Year: "2014",
+arrest_count: "1"
+},
+
+// SEX
+{
+Month: "10",
+Year: "2001",
+arrest_count: "1"
+},
+{
+Month: "5",
+Year: "2005",
+arrest_count: "1"
+},
+{
+Month: "8",
+Year: "2006",
+arrest_count: "1"
+},
+{
+Month: "5",
+Year: "2009",
+arrest_count: "1"
+},
+{
+Month: "4",
+Year: "2011",
+arrest_count: "1"
+},
+{
+Month: "2",
+Year: "2012",
+arrest_count: "1"
+},
+
+// DRUGS, GUN
+{
+Month: "2",
+Year: "2000",
+arrest_count: "1"
+},
+{
+Month: "1",
+Year: "2002",
+arrest_count: "1"
+},
+{
+Month: "6",
+Year: "2006",
+arrest_count: "1"
+},
+{
+Month: "1",
+Year: "2011",
+arrest_count: "1"
+},
+{
+Month: "5",
+Year: "2013",
+arrest_count: "1"
+},
+{
+Month: "2",
+Year: "2015",
+arrest_count: "1"
+},
+
+// Assault, gun
+{
+Month: "2",
+Year: "2002",
+arrest_count: "1"
+},
+{
+Month: "10",
+Year: "2003",
+arrest_count: "1"
+},
+{
+Month: "7",
+Year: "2007",
+arrest_count: "1"
+},
+{
+Month: "11",
+Year: "2011",
+arrest_count: "1"
+},
+{
+Month: "7",
+Year: "2012",
+arrest_count: "2"
+},
+
+// Obstruction
+{
+Month: "7",
+Year: "2003",
+arrest_count: "1"
+},
+{
+Month: "2",
+Year: "2004",
+arrest_count: "1"
+},
+{
+Month: "1",
+Year: "2009",
+arrest_count: "1"
+},
+{
+Month: "4",
+Year: "2011",
+arrest_count: "1"
+},
+{
+Month: "9",
+Year: "2012",
+arrest_count: "1"
+},
+// Trespassing
+{
+Month: "3",
+Year: "2003",
+arrest_count: "1"
+},
+{
+Month: "2",
+Year: "2007",
+arrest_count: "1"
+},
+{
+Month: "10",
+Year: "2014",
+arrest_count: "2"
+},
+{
+Month: "11",
+Year: "2014",
+arrest_count: "1"
+},
+// Animal abuse
+{
+Month: "11",
+Year: "2000",
+arrest_count: "1"
+},
+{
+Month: "4",
+Year: "2001",
+arrest_count: "1"
+},
+{
+Month: "11",
+Year: "2001",
+arrest_count: "1"
+},
+{
+Month: "2",
+Year: "2007",
+arrest_count: "1"
+},
+
+// Violating court order
+{
+Month: "3",
+Year: "2004",
+arrest_count: "1"
+},
+{
+Month: "1",
+Year: "2005",
+arrest_count: "1"
+},
+{
+Month: "3",
+Year: "2005",
+arrest_count: "1"
+},
+{
+Month: "9",
+Year: "2006",
+arrest_count: "1"
+},
+// Disorderly conduct, sex
+{
+Month: "12",
+Year: "2005",
+arrest_count: "4"
+},
+// Sexual assault
+{
+Month: "4",
+Year: "2000",
+arrest_count: "1"
+},
+{
+Month: "2",
+Year: "2002",
+arrest_count: "1"
+},
+{
+Month: "6",
+Year: "2010",
+arrest_count: "1"
+},
+{
+Month: "12",
+Year: "2010",
+arrest_count: "1"
+},
+// Gun, drugs
+{
+Month: "2",
+Year: "2005",
+arrest_count: "1"
+},
+{
+Month: "3",
+Year: "2007",
+arrest_count: "2"
+},
+{
+Month: "5",
+Year: "2007",
+arrest_count: "1"
+},
+// Solicitation
+{
+Month: "7",
+Year: "2001",
+arrest_count: "1"
+},
+{
+Month: "4",
+Year: "2013",
+arrest_count: "1"
+},
+{
+Month: "3",
+Year: "2014",
+arrest_count: "1"
+},
+// Probation violation
+{
+Month: "1",
+Year: "2001",
+arrest_count: "1"
+},
+{
+Month: "6",
+Year: "2008",
+arrest_count: "1"
+},
+{
+Month: "3",
+Year: "2014",
+arrest_count: "1"
+},
+// Disorderly conduct, alcoh
+{
+Month: "8",
+Year: "2005",
+arrest_count: "2"
+},
+{
+Month: "12",
+Year: "2005",
+arrest_count: "1"
+},
+// Domestic dispute
+{
+Month: "11",
+Year: "2006",
+arrest_count: "1"
+},
+{
+Month: "3",
+Year: "2009",
+arrest_count: "1"
+},
+// Domestic violence, gun
+{
+Month: "12",
+Year: "2003",
+arrest_count: "1"
+},
+{
+Month: "6",
+Year: "2008",
+arrest_count: "1"
+},
+// Assault, alcohol
+{
+Month: "9",
+Year: "2003",
+arrest_count: "1"
+},
+{
+Month: "12",
+Year: "2013",
+arrest_count: "1"
+},
+// Alcohol, assault
+{
+Month: "10",
+Year: "2007",
+arrest_count: "1"
+},
+{
+Month: "12",
+Year: "2007",
+arrest_count: "1"
+},
+// Public urination
+{
+Month: "12",
+Year: "2006",
+arrest_count: "1"
+},
+{
+Month: "10",
+Year: "2009",
+arrest_count: "1"
+},
+// Harassment
+{
+Month: "7",
+Year: "2003",
+arrest_count: "1"
+},
+{
+Month: "1",
+Year: "2005",
+arrest_count: "1"
+},
+// DUI, gun
+{
+Month: "5",
+Year: "2003",
+arrest_count: "1"
+},
+{
+Month: "11",
+Year: "2003",
+arrest_count: "1"
+},
+// Manslaughter
+{
+Month: "1",
+Year: "2003",
+arrest_count: "1"
+},
+{
+Month: "5",
+Year: "2008",
+arrest_count: "1"
+},
+// Child support
+{
+Month: "12",
+Year: "2008",
+arrest_count: "1"
+},
+{
+Month: "12",
+Year: "2013",
+arrest_count: "1"
+},
+// Murder, gun
+{
+Month: "12",
+Year: "2012",
+arrest_count: "1"
+},
+{
+Month: "6",
+Year: "2013",
+arrest_count: "1"
+},
+// Burglary
+{
+Month: "7",
+Year: "2002",
+arrest_count: "1"
+},
+{
+Month: "7",
+Year: "2015",
+arrest_count: "1"
+},
+// Criminal mischief
+{
+Month: "4",
+Year: "2004",
+arrest_count: "1"
+},
+{
+Month: "2",
+Year: "2013",
+arrest_count: "1"
+},
+// Indecent exposure
+{
+Month: "5",
+Year: "2009",
+arrest_count: "1"
+},
+{
+Month: "2",
+Year: "2015",
+arrest_count: "1"
+},
+// Child abuse
+{Month: "2",Year: "2013", arrest_count: "1"
+},
+{
+Month: "9",
+Year: "2014",
+arrest_count: "1"
+},
+// False information
+{
+Month: "8",
+Year: "2000",
+arrest_count: "1"
+},
+{
+Month: "10",
+Year: "2004",
+arrest_count: "1"
+},
+// Dogfighting
+{
+Month: "7",
+Year: "2007",
+arrest_count: "1"
+},
+// Burglary, battery
+{
+Month: "7",
+Year: "2000",
+arrest_count: "1"
+},
+// Attempted murder
+{
+Month: "6",
+Year: "2013",
+arrest_count: "1"
+},
+// Domestic
+{
+Month: "5",
+Year: "2007",
+arrest_count: "1"
+},
+// Sexual battery
+{
+Month: "8",
+Year: "2015",
+arrest_count: "1"
+},
+
+// Hit-and-run
+{
+Month: "6",
+Year: "2015",
+arrest_count: "1"
+},
+// False name
+{
+Month: "6",
+Year: "2015",
+arrest_count: "1"
+},
+// DUI, drugs, gun
+{
+Month: "11",
+Year: "2016",
+arrest_count: "1"
+},
+// Traffic warrants
+{
+Month: "7",
+Year: "2012",
+arrest_count: "1"
+},
+// Battery, alcohol
+{
+Month: "4",
+Year: "2006",
+arrest_count: "1"
+},
+// Domestic violence, rape
+{
+Month: "1",
+Year: "2015",
+arrest_count: "1"
+},
+// Disturbing the peace
+{
+Month: "3",
+Year: "2011",
+arrest_count: "1"
+},
+// Handicap parking
+{
+Month: "10",
+Year: "2014",
+arrest_count: "1"
+},
+// DUI, assault
+{
+Month: "3",
+Year: "2010",
+arrest_count: "1"
+},
+// Gun, stolen possession
+{
+Month: "2",
+Year: "2005",
+arrest_count: "1"
+},
+// Gambling, gun
+{
+Month: "4",
+Year: "2004",
+arrest_count: "1"
+},
+// Guns, drugs, reckless dri
+{
+Month: "2",
+Year: "2009",
+arrest_count: "1"
+},
+// Burglary, assault
+{
+Month: "8",
+Year: "2003",
+arrest_count: "1"
+},
+// Drugs, license
+{
+Month: "6",
+Year: "2002",
+arrest_count: "1"
+},
+// Manslaughter, child abuse
+{
+Month: "5",
+Year: "2001",
+arrest_count: "1"
+},
+// Weapon
+{
+Month: "7",
+Year: "2013",
+arrest_count: "1"
+},
+// Battery, resisting arrres
+{
+Month: "6",
+Year: "2007",
+arrest_count: "1"
+},
+// Failure to appear, gun
+{
+Month: "4",
+Year: "2000",
+arrest_count: "1"
+},
+// Fraud
+{
+Month: "3",
+Year: "2013",
+arrest_count: "1"
+},
+// Pimping
+{
+Month: "5",
+Year: "2007",
+arrest_count: "1"
+},
+// Hit and Run
+{
+Month: "10",
+Year: "2015",
+arrest_count: "1"
+},
+// Animal cruelty
+{
+Month: "5",
+Year: "2015",
+arrest_count: "1"
+},
+// Guns
+{
+Month: "12",
+Year: "2006",
+arrest_count: "1"
+},
+// Evading arrest
+{
+Month: "3",
+Year: "2015",
+arrest_count: "1"
+},
+// Reckless endangerment
+{
+Month: "7",
+Year: "2012",
+arrest_count: "1"
+},
+// Evading police
+{
+Month: "8",
+Year: "2006",
+arrest_count: "1"
+},
+// Stalking
+{
+Month: "10",
+Year: "2011",
+arrest_count: "1"
+},
+// Property destruction
+{
+Month: "4",
+Year: "2006",
+arrest_count: "1"
+},
+// Gun, privacy invasion
+{
+Month: "12",
+Year: "2014",
+arrest_count: "1"
+},
+// Domestic violence, alcoho
+{
+Month: "7",
+Year: "2005",
+arrest_count: "1"
+},
+// License, guns
+{
+Month: "2",
+Year: "2009",
+arrest_count: "1"
+},
+// Alcohol, disorderly condu
+{
+Month: "1",
+Year: "2009",
+arrest_count: "1"
+},
+// Reckless driving, drugs
+{
+Month: "9",
+Year: "2002",
+arrest_count: "1"
+},
+// Leaving scene.
+{
+Month: "2",
+Year: "2002",
+arrest_count: "1"
+},
+// Alcohol, resisting arrest
+{
+Month: "11",
+Year: "2007",
+arrest_count: "1"
+},
+// Theft, gun
+{
+Month: "5",
+Year: "2001",
+arrest_count: "1"
+},
+// Coercion, gun
+{
+Month: "6",
+Year: "2007",
+arrest_count: "1"
+},
+// Murder
+{
+Month: "1",
+Year: "2000",
+arrest_count: "1"
+},
+// Traffic warrant
+{
+Month: "5",
+Year: "2016",
+arrest_count: "1"
+},
+// Resisting officer
+{
+Month: "3",
+Year: "2015",
+arrest_count: "1"
+},
+// Drugs, resisting arrest
+{
+Month: "12",
+Year: "2006",
+arrest_count: "1"
+},
+// Burglary, gun
+{
+Month: "7",
+Year: "2012",
+arrest_count: "1"
+},
+
+// Animal cruelty, drugs
+{
+Month: "2",
+Year: "2015",
+arrest_count: "1"
+},
+// DUI,drugs
+{
+Month: "7",
+Year: "2010",
+arrest_count: "1"
+},
+// Gun, assault
+{
+Month: "6",
+Year: "2005",
+arrest_count: "1"
+},
+// DUI, manslaughter
+{
+Month: "4",
+Year: "2009",
+arrest_count: "1"
+},
+// Guns, drugs
+{
+Month: "2",
+Year: "2009",
+arrest_count: "1"
+},
+// Theft, drugs
+{
+Month: "10",
+Year: "2003",
+arrest_count: "1"
+},
+// Reckless driving, weapon
+{
+Month: "3",
+Year: "2014",
+arrest_count: "1"
+},
+// Interfering with police
+{
+Month: "1",
+Year: "2009",
+arrest_count: "1"
+},
+// Breach of peace
+{
+Month: "9",
+Year: "2002",
+arrest_count: "1"
+},
+// Animal neglect
+{
+Month: "2",
+Year: "2008",
+arrest_count: "1"
+},
+// Drugs, reckless driving
+{
+Month: "7",
+Year: "2001",
+arrest_count: "1"
+}
+
 ];
 
 // // CODE TO COMBINE THE TOP 10 CRIMES BY MONTH, YEAR

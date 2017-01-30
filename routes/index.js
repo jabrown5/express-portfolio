@@ -34,6 +34,10 @@ router.get('/good-cat', function(req, res, next) {
     res.render('good-cat-game', { });
 });
 
+router.get('/divvy', function(req, res, next) {
+    res.render('divvy', { });
+});
+
 router.get('/nfl-arrests', function(req, res, next) {
     res.render('nfl-arrests', { });
 });
