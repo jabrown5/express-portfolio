@@ -2221,6 +2221,8 @@ select {
     background-color: #d7ecfa;
     color: #0a0a0a; }
   .callout.secondary {
+    // REVISED 
+    // background-color:#CCB229;
     background-color: #eaeaea;
     color: #0a0a0a; }
   .callout.success {
@@ -3737,6 +3739,8 @@ a.thumbnail {
     clear: both; }
   .top-bar,
   .top-bar ul {
+    // REVISED
+    // background-color: rgb(79,105,128); } 
     background-color: #e6e6e6; }
   .top-bar input {
     max-width: 200px;

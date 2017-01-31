@@ -1,0 +1,159 @@
+<div style="margin-left:5%; margin-right:5%">
+
+
+    <h4><b>Divvy Bike Share Use in Chicago (2016): The Effect of Gender</b></h4>
+
+    <br>
+
+
+    <h5><b>Introduction</b></h5>
+    <p>The purpose of this project is to understand bike share usage in the city of Chicago over the year 2016; specifically, the differences between male and female users.  Several areas of use were compared, using publically available ride data from Divvy for the year 2016.  Findings indicate differences between male and female users.</p>
+
+    <h5><b>Methodology and Data</b></h5>
+    <p>This section will discuss the Divvy and weather data, how the data were modified for analyses, and any limitations.</p>
+
+
+    <h6><b><em>Divvy</em></b></h6>
+    <p>The data for this project was courtesy of Divvy, a bike share program in the city of Chicago. Divvy collects data on every single ride taken and includes the origination point, unique bicycle used, length of the ride, etc.  While these data are available from the latter half of 2013, this project focused solely on data from the year 2016.  These data are available in a csv format and were downloaded from Divvy’s website.</p>
+
+    <ul>
+        <li><a href="https://www.divvybikes.com/system-data">https://www.divvybikes.com/system-data</a></li> 
+    </ul>
+
+    <p>In these data, Divvy differentiates between three types of users: subscribers, customers, and dependents. Subscribers are users with an annual membership allowing them unlimited usage of the bikes for a set yearly fee. They are flagged as “subscribers” in the Divvy data. Customers or non-subscribers are users who purchase a 24-hour pass that enables unlimited rides during that time frame. Dependents is a group that is not clearly defined in the Divvy data documentation and so has been excluded from analyses - a total of 40 unique rides. </p>
+
+    <p>Gender data is only available for subscribers.  Since these are regular users, more detailed information is available.  This means, however, that non-subscribers are excluded from the analyses, an unfortunate but necessary part of the analyses.</p>
+
+    <p>In total, 2,918,778 rides were taken by subscribers in 2016. Of these rides, 732,710 were taken by females and 2,186,068 were taken by males.</p>
+
+    <h6><em>Limitations</em></h6>
+    <p>The analyses leaves out a large swathe of riders - the non-subscribers.  Any findings cannot be extrapolated to this group of users.</p>
+
+
+    <h6><b><em>Weather</em></b></h6>
+
+    <p>A minor addition to the analyses of the Divvy data necessitated the use of weather data for the year 2016.  Weather Underground provides a detailed history of weather in various locations over various time periods.  Using this source, weather data for the city of Chicago for the entire year of 2016 was collected.</p>
+
+    <p>These data included points such as daily maximum temperature, precipitation, and wind speed to name a few.  This project only used daily maximum temperature in the analyses of bike usage.</p>
+
+    <ul>
+        <li><a href="https://www.wunderground.com">https://www.wunderground.com</a></li>     
+    </ul>
+
+
+
+    <h5><b>Methods</b></h5>
+
+    <p>The primary focus of this study is descriptive.  Tableau Public is used to present the graphics. The basic differences between males and females are outlined, including: the percentage of rides taken by each, the length in minutes of the average ride, the number of rides taken each week plotted across the entire year and also against temperature, the number of rides taken each day of the week and also by time of day, and the most common points of origin for these rides.</p>
+
+
+
+    <h5><b>Findings</b></h5>
+
+
+    <h6><b><em>Rides by Gender</em></b></h6>
+    <p>The first analyses show that the majority of rides were taken by males.  Male riders accounted for 75 percent of all rides while female riders were 25%. (shown below)</p>
+    <br>
+
+        <div class='tableauPlaceholder' id='viz1485887347792' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Di&#47;DivvyBikes-2016ChicagoRideData-GenderFINAL&#47;RidesbyGender&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='DivvyBikes-2016ChicagoRideData-GenderFINAL&#47;RidesbyGender' /><param name='tabs' value='yes' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Di&#47;DivvyBikes-2016ChicagoRideData-GenderFINAL&#47;RidesbyGender&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object>
+        </div>                
+        <script type='text/javascript'>                    var divElement = document.getElementById('viz1485887347792');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+        </script>
+
+
+    <br>
+
+    <h6><b><em>Ride Duration</em></b></h6>
+    <p>The next descriptive examines the average duration of each unique ride or trip by gender.  Females had an average ride time of just under 13 and a half minutes while males clocked in with with an average ride time of just over 11 and a half minutes.</p>
+
+        <div class='tableauPlaceholder' id='viz1485887369180' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Di&#47;DivvyBikes-2016ChicagoRideData-GenderFINAL&#47;RideDurationbyCustomerType&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='DivvyBikes-2016ChicagoRideData-GenderFINAL&#47;RideDurationbyCustomerType' /><param name='tabs' value='yes' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Di&#47;DivvyBikes-2016ChicagoRideData-GenderFINAL&#47;RideDurationbyCustomerType&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object>
+        </div>                
+        <script type='text/javascript'>                    var divElement = document.getElementById('viz1485887369180');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+        </script>
+
+
+    <br>
+
+
+    <h6><b><em>Yearly Trends</em></b></h6>
+    <p>The chart below plots the weekly number of rides for male and female riders against the average weekly high temperature.  While male and female riders have differing ride totals for each week with males tallying a much greater number of rides, in general, ridership tends to trend with temperatures for both genders.</p>
+
+
+        <div class='tableauPlaceholder' id='viz1485887389768' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Di&#47;DivvyBikes-2016ChicagoRideData-GenderFINAL&#47;RidesbyWeekTemp&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='DivvyBikes-2016ChicagoRideData-GenderFINAL&#47;RidesbyWeekTemp' /><param name='tabs' value='yes' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Di&#47;DivvyBikes-2016ChicagoRideData-GenderFINAL&#47;RidesbyWeekTemp&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object>
+        </div>                
+        <script type='text/javascript'>                    var divElement = document.getElementById('viz1485887389768');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+        </script>
+
+
+    <br>
+
+
+    <h6><b><em>Day of Week</em></b></h6>
+    <p>The weekly trends for ridership by gender are below.  This chart shows total ridership for each day of the week (each day is aggregated across the year) for each gender.  Male riders consistently have higher numbers for every day of the week.  Male usage, however, rises sharply on weekday days.  Female ridership, while lower overall, remains steadier throughout the entire week with only slight declines on the weekend days.</p>
+
+
+        <div class='tableauPlaceholder' id='viz1485887409118' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Di&#47;DivvyBikes-2016ChicagoRideData-GenderFINAL&#47;RidesbyDoW&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='DivvyBikes-2016ChicagoRideData-GenderFINAL&#47;RidesbyDoW' /><param name='tabs' value='yes' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Di&#47;DivvyBikes-2016ChicagoRideData-GenderFINAL&#47;RidesbyDoW&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object>
+        </div>                
+        <script type='text/javascript'>                    var divElement = document.getElementById('viz1485887409118');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+        </script>
+
+
+    <br>
+
+
+    <h6><b><em>Time of Day</em></b></h6>
+
+    <p>The trends for time of day ridership by gender trends nearly identically.  The obvious difference between male and female riders being that males clock in many more rides overall.</p>
+
+    <p>The general trend for both males and female spikes sharply at two points during the day – morning and late afternoon.  This trend likely coincides with peak commuting times.</p>
+
+
+        <div class='tableauPlaceholder' id='viz1485887425574' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Di&#47;DivvyBikes-2016ChicagoRideData-GenderFINAL&#47;RidesbyToD&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='DivvyBikes-2016ChicagoRideData-GenderFINAL&#47;RidesbyToD' /><param name='tabs' value='yes' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Di&#47;DivvyBikes-2016ChicagoRideData-GenderFINAL&#47;RidesbyToD&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object>
+        </div>                
+        <script type='text/javascript'>                    var divElement = document.getElementById('viz1485887425574');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+        </script>
+
+
+    <br>
+
+
+    <h6><b><em>Mapping Ride Origins</em></b></h6>
+
+    <p>The two maps below chart the density of ride origin based on gender. The busiest location for males' ride origin were clustered by the commuter train stations (Ogilvie and Union Stations) along Clinton Street.  For females, however, there are no dramatic high density locations, instead, usage appears more spread out.</p>
+
+
+        <div class='tableauPlaceholder' id='viz1485887462507' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;N8&#47;N85JZ3HGG&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='path' value='shared&#47;N85JZ3HGG' /> <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;N8&#47;N85JZ3HGG&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object>
+        </div>               
+        <script type='text/javascript'>                    var divElement = document.getElementById('viz1485887462507');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+        </script>
+
+
+    <br>
+
+        <div class='tableauPlaceholder' id='viz1485887499802' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Di&#47;DivvyBikes-2016ChicagoRideData-GenderFINAL&#47;MapofRideOrigins-Male&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='path' value='views&#47;DivvyBikes-2016ChicagoRideData-GenderFINAL&#47;MapofRideOrigins-Male?:embed=y&amp;:display_count=y' /> <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Di&#47;DivvyBikes-2016ChicagoRideData-GenderFINAL&#47;MapofRideOrigins-Male&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object>
+        </div>                
+        <script type='text/javascript'>                    
+        var divElement = document.getElementById('viz1485887499802');
+        var vizElement = divElement.getElementsByTagName('object')[0];
+        vizElement.style.width='100%';
+        vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
+        var scriptElement = document.createElement('script');
+        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
+        vizElement.parentNode.insertBefore(scriptElement, vizElement);   
+        </script>
+
+
+    <br>
+
+    <h5><b>Conclusions</b></h5>
+
+    <p>In sum, the descriptive analyses indicates several differences between male and female subscribers who use Divvy’s services.  Female subscribers, overall, account for fewer unique rides but each ride lasts slightly longer, and there is no point of origin that is dramatically more popular.  Male usage shows a large number of rides originating near the commuter hubs that ferry users into the city from the suburbs (Ogilivie, Union Stations).</p>
+
+    <p>Both male and female users tends to trend with yearly weather patterns and use spikes among both groups during peak commuting hours when looked at on an hourly basis.  Looking at overall weekly usage, females remain mostly consistent throughout the week with male subscribers usage clocking higher numbers during the week with less on the weekend.</p>
+
+    <h5><b>Next Steps</b></h5>
+
+    <p>The Divvy data is a rich and interesting source of information.  Additional work should be done to dig deeper into differences between male and female users. Looking at usage by the hour but also breaking it down my day of the week would be a good next step.  Ridership among users may look different on weekends compared to use during the week and it may even differ by subscriber status.  Additionally, where are rides concluding?  This work examined where rides originate but analysis ion destination would also be useful.  And lastly, adding age, which could be calculated among subscribers, would be an interesting addition as perhaps usage by gender is influenced by age.</p>
+
+
+</div>
