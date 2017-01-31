@@ -1,66 +1,164 @@
-
-
-
-
 <div style="margin-left:5%; margin-right:5%">
 
 
     <h4><b>Divvy Bike Share Use in Chicago (2016): The Effect of Gender</b></h4>
 
-    <h6><em>Summary</em></h6>
+    <br>
 
-    <p>After coming across a publically available API containing arrest data of NFL players from January 31, 2001 to January 31, 2016, I was interested in looking at these data just for fun! </p>
 
-    <p>The data show that DUI or Driving Under the Influence is the most common offense for arrest.  The NFL franchise with the most arrests was the  Minnesota Vikings with player Mryant McKinnie leading the Vikings with the most arrests</p>
+    <h5><b>Introduction</b></h5>
+    <p>The purpose of this project is to understand bike share usage in the city of Chicago over the year 2016; specifically, the differences between users with a subscription to the service and pay-per-use riders.  Several areas of use were compared, using publically available ride data from Divvy for the year 2016.  Findings indicate differences between pay-per-day riders and yearly subscribers.</p>
 
-    <h6><em>Tools used</em></h6>
-    <ul>
-        <li>HTML, CSS</li>
-        <li>Tableau</li>
-    </ul>
+    <h5><b>Methodology and Data</b></h5>
+    <p>This section will discuss the Divvy and weather data, how the data were modified in for analyses, and any limitations.</p>
 
-    <h6><em>Find the original source data</em></h6>
+
+    <h6><b><em>Divvy</em></b></h6>
+    <p>The data for this project was courtesy of Divvy, a bike share program in the city of Chicago. Divvy collects data on every single ride taken and includes the origination point, unique bicycle used, length of the ride, etc.  While these data are available from the latter half of 2013, this project focused solely on data from the year 2016.  These data are available in a csv format and were downloaded from Divvy’s website.</p>
+
     <ul>
         <li><a href="https://www.divvybikes.com/system-data">https://www.divvybikes.com/system-data</a></li> 
-        <li><a href="https://www.wunderground.com">https://www.wunderground.com</a></li>     </ul>
+    </ul>
+
+    <p>In these data, Divvy differentiates between three types of users: subscribers, customers, and dependents.</p>
+
+    <h6><em>Subscribers</em></h6>
+    <p>Subscribers are users with an annual membership allowing them unlimited usage of the bikes for a set yearly fee. They are flagged as “subscribers” in the Divvy data and this project retains this convention by continuing to refer to these riders as “subscribers” in the analyses.</p>
+    <p>Subscribers accounted for 2,919,112 of all rides taken in the year 2016.</p>
+
+    <h6><em>Non-Subscribers</em></h6>
+    <p>These are customers or users who purchase a 24-hour pass that enables unlimited rides during that time frame.  These users are flagged as “customers” in the Divvy data, however, the term “customer” is confusing as all Divvy users are technically customers.  Consequently, this project has renamed these users as “non-subscribers” to more clearly define their type of usage.</p>
+    <p>Non-subscribers constituted 907,866 of all rides taken in the year 2016.</p>
+
+    <h6><em>Dependents</em></h6>
+    <p>Divvy also includes a category for “dependents” but does not elaborate on this term in their documentation.  A total of 40 rides for the year 2016 were taken by users classified as a “dependent” but these users were excluded from analyses since their numbers are so small and a solid definition of how to classify these users in comparison to subscribers and non-subscribers was not available.</p>
+
+    <h6><em>Limitations</em></h6>
+    <p>It is important to note that these data are anonymized and on a per-ride basis.  Data users are not able to see how many rides were taken by a specific user therefore, it is important to bear in mind that a single user could potentially account for dozens of rides.  These data are simply on a ride level basis – not a user level basis</p>
+
+
+    <h6><b><em>Weather</em></b></h6>
+
+    <p>A minor addition to the analyses of the Divvy data necessitated the use of weather data for the year 2016.  Weather Underground provides a detailed history of weather in various locations over various time periods.  Using this source, weather data for the city of Chicago for the entire year of 2016 was collected.</p>
+
+    <p>These data included points such as daily maximum temperature, precipitation, and wind speed to name a few.  This project only used daily maximum temperature in the analyses of bike usage.</p>
+
+    <ul>
+        <li><a href="https://www.wunderground.com">https://www.wunderground.com</a></li>     
+    </ul>
+
+
+
+    <h5><b>Methods</b></h5>
+
+    <p>The primary focus of this study is descriptive.  Tableau Public is used to present the graphics. The basic differences between subscribers and non-subscribers are outlined, including: the percentage of rides taken by each, the length in minutes of the average ride, the number of rides taken each week plotted across the entire year and also against temperature, the number of rides taken each day of the week and also by time of day, and the most common points of origin for these rides.</p>
+
+
+
+    <h5><b>Findings</b></h5>
+
+
+    <h6><b><em>Rides by Gender</em></b></h6>
+    <p>The first analyses show that the majority of rides were taken by subscribers.  Subscribers accounted for 76 percent of all rides while non-subscribers were 24%. (shown below)</p>
+    <br>
+
+        <div class='tableauPlaceholder' id='viz1485887347792' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Di&#47;DivvyBikes-2016ChicagoRideData-GenderFINAL&#47;RidesbyGender&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='DivvyBikes-2016ChicagoRideData-GenderFINAL&#47;RidesbyGender' /><param name='tabs' value='yes' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Di&#47;DivvyBikes-2016ChicagoRideData-GenderFINAL&#47;RidesbyGender&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object>
+        </div>                
+        <script type='text/javascript'>                    var divElement = document.getElementById('viz1485887347792');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+        </script>
+
 
     <br>
 
-<div class='tableauPlaceholder' id='viz1485887347792' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Di&#47;DivvyBikes-2016ChicagoRideData-GenderFINAL&#47;RidesbyGender&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='DivvyBikes-2016ChicagoRideData-GenderFINAL&#47;RidesbyGender' /><param name='tabs' value='yes' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Di&#47;DivvyBikes-2016ChicagoRideData-GenderFINAL&#47;RidesbyGender&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1485887347792');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+    <h6><b><em>Ride Duration</em></b></h6>
+    <p>The next descriptive examines the average duration of each unique ride or trip by subscriber status.  Non-subscribers had an average ride time of just under 31 minutes while subscribers clocked in with with an average ride time of just over 12 minutes.</p>
+
+        <div class='tableauPlaceholder' id='viz1485887369180' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Di&#47;DivvyBikes-2016ChicagoRideData-GenderFINAL&#47;RideDurationbyCustomerType&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='DivvyBikes-2016ChicagoRideData-GenderFINAL&#47;RideDurationbyCustomerType' /><param name='tabs' value='yes' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Di&#47;DivvyBikes-2016ChicagoRideData-GenderFINAL&#47;RideDurationbyCustomerType&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object>
+        </div>                
+        <script type='text/javascript'>                    var divElement = document.getElementById('viz1485887369180');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+        </script>
 
 
     <br>
 
-<div class='tableauPlaceholder' id='viz1485887369180' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Di&#47;DivvyBikes-2016ChicagoRideData-GenderFINAL&#47;RideDurationbyCustomerType&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='DivvyBikes-2016ChicagoRideData-GenderFINAL&#47;RideDurationbyCustomerType' /><param name='tabs' value='yes' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Di&#47;DivvyBikes-2016ChicagoRideData-GenderFINAL&#47;RideDurationbyCustomerType&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1485887369180');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+
+    <h6><b><em>Yearly Trends</em></b></h6>
+    <p>The chart below plots the weekly number of rides for subscribers and non-subscribers against the average weekly high temperature.  While subscribers and non-subscribers have differing ride totals for each week with subscribers tallying a much greater number of rides, in general, ridership tends to trend with temperatures for both types of rider.</p>
+
+
+        <div class='tableauPlaceholder' id='viz1485887389768' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Di&#47;DivvyBikes-2016ChicagoRideData-GenderFINAL&#47;RidesbyWeekTemp&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='DivvyBikes-2016ChicagoRideData-GenderFINAL&#47;RidesbyWeekTemp' /><param name='tabs' value='yes' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Di&#47;DivvyBikes-2016ChicagoRideData-GenderFINAL&#47;RidesbyWeekTemp&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object>
+        </div>                
+        <script type='text/javascript'>                    var divElement = document.getElementById('viz1485887389768');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+        </script>
 
 
     <br>
 
-<div class='tableauPlaceholder' id='viz1485887389768' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Di&#47;DivvyBikes-2016ChicagoRideData-GenderFINAL&#47;RidesbyWeekTemp&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='DivvyBikes-2016ChicagoRideData-GenderFINAL&#47;RidesbyWeekTemp' /><param name='tabs' value='yes' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Di&#47;DivvyBikes-2016ChicagoRideData-GenderFINAL&#47;RidesbyWeekTemp&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1485887389768');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+
+    <h6><b><em>Day of Week</em></b></h6>
+    <p>The weekly trends for ridership by subscriber status are below.  This chart shows total ridership for each day of the week (across the year) for each type of rider.  Number of rides is greatest for non-subscribers over the weekend and lowest in mid-week.  Opposite to this trend, ridership among subscribers peaks during the week with lowest numbers tallied over the weekend days.</p>
+
+
+        <div class='tableauPlaceholder' id='viz1485887409118' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Di&#47;DivvyBikes-2016ChicagoRideData-GenderFINAL&#47;RidesbyDoW&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='DivvyBikes-2016ChicagoRideData-GenderFINAL&#47;RidesbyDoW' /><param name='tabs' value='yes' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Di&#47;DivvyBikes-2016ChicagoRideData-GenderFINAL&#47;RidesbyDoW&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object>
+        </div>                
+        <script type='text/javascript'>                    var divElement = document.getElementById('viz1485887409118');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+        </script>
 
 
     <br>
 
-<div class='tableauPlaceholder' id='viz1485887409118' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Di&#47;DivvyBikes-2016ChicagoRideData-GenderFINAL&#47;RidesbyDoW&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='DivvyBikes-2016ChicagoRideData-GenderFINAL&#47;RidesbyDoW' /><param name='tabs' value='yes' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Di&#47;DivvyBikes-2016ChicagoRideData-GenderFINAL&#47;RidesbyDoW&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1485887409118');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+
+    <h6><b><em>Time of Day</em></b></h6>
+
+    <p>The trends for time of day ridership by subscriber status differs for each group.  Non-subscribers slope slowly upward and peak in the mid-afternoon.  Subscribers usage spikes sharply at two points during the day – morning and late afternoon.  This trend likely coincides with peak commuting times.</p>
+
+
+        <div class='tableauPlaceholder' id='viz1485887425574' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Di&#47;DivvyBikes-2016ChicagoRideData-GenderFINAL&#47;RidesbyToD&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='DivvyBikes-2016ChicagoRideData-GenderFINAL&#47;RidesbyToD' /><param name='tabs' value='yes' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Di&#47;DivvyBikes-2016ChicagoRideData-GenderFINAL&#47;RidesbyToD&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object>
+        </div>                
+        <script type='text/javascript'>                    var divElement = document.getElementById('viz1485887425574');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+        </script>
 
 
     <br>
 
-<div class='tableauPlaceholder' id='viz1485887425574' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Di&#47;DivvyBikes-2016ChicagoRideData-GenderFINAL&#47;RidesbyToD&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='DivvyBikes-2016ChicagoRideData-GenderFINAL&#47;RidesbyToD' /><param name='tabs' value='yes' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Di&#47;DivvyBikes-2016ChicagoRideData-GenderFINAL&#47;RidesbyToD&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1485887425574');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+
+    <h6><b><em>Mapping Ride Origins</em></b></h6>
+
+    <p>The two maps below chart the density of ride origin based on subscriber status.  It was speculated that rides would originate differently for the two groups likely linked to different needs (commute versus leisure).</p>
+    
+    <p>The busiest location for subscribers’ ride origin were clustered by the commuter train stations (Ogilvie and Union Stations) along Clinton Street.  For non-subscribers, however, the busiest locations were along the lakeshore near Navy Pier, Museum Campus, and the beaches on the north side of the city.  This is likely due to heavier tourist activity in those areas.</p>
+
+
+        <div class='tableauPlaceholder' id='viz1485887462507' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;N8&#47;N85JZ3HGG&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='path' value='shared&#47;N85JZ3HGG' /> <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;N8&#47;N85JZ3HGG&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object>
+        </div>               
+        <script type='text/javascript'>                    var divElement = document.getElementById('viz1485887462507');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+        </script>
 
 
     <br>
 
-<div class='tableauPlaceholder' id='viz1485887462507' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;N8&#47;N85JZ3HGG&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='path' value='shared&#47;N85JZ3HGG' /> <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;N8&#47;N85JZ3HGG&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1485887462507');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+        <div class='tableauPlaceholder' id='viz1485887499802' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Di&#47;DivvyBikes-2016ChicagoRideData-GenderFINAL&#47;MapofRideOrigins-Male&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='path' value='views&#47;DivvyBikes-2016ChicagoRideData-GenderFINAL&#47;MapofRideOrigins-Male?:embed=y&amp;:display_count=y' /> <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Di&#47;DivvyBikes-2016ChicagoRideData-GenderFINAL&#47;MapofRideOrigins-Male&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object>
+        </div>                
+        <script type='text/javascript'>                    
+        var divElement = document.getElementById('viz1485887499802');
+        var vizElement = divElement.getElementsByTagName('object')[0];
+        vizElement.style.width='100%';
+        vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
+        var scriptElement = document.createElement('script');
+        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
+        vizElement.parentNode.insertBefore(scriptElement, vizElement);   
+        </script>
 
 
     <br>
 
-<div class='tableauPlaceholder' id='viz1485887499802' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Di&#47;DivvyBikes-2016ChicagoRideData-GenderFINAL&#47;MapofRideOrigins-Male&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='path' value='views&#47;DivvyBikes-2016ChicagoRideData-GenderFINAL&#47;MapofRideOrigins-Male?:embed=y&amp;:display_count=y' /> <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Di&#47;DivvyBikes-2016ChicagoRideData-GenderFINAL&#47;MapofRideOrigins-Male&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1485887499802');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+    <h5><b>Conclusions</b></h5>
 
+    <p>In sum, the descriptive analyses indicates several differences between subscribers and non-subscribers who use Divvy’s services.  Non-subscribers, overall, account for fewer unique rides but each ride lasts longer.  Usage among these users tends to trend with yearly weather patterns and also peaks on weekends and mid-afternoon.  Subscribers, on the other hand, make up the majority of all rides taken and these rides are relatively quick compared to non-subscribers.  Subscribers’ usage also follows the temperature trends over the year and, on a weekly basis, peaks on weekdays.  Subscriber status also impacts where rides originate for each group with non-subscribers having large clusters along the lakeshore and other tourist geared activities.</p>
 
-    <br>
+    <h5><b>Next Steps</b></h5>
 
+    <p>The Divvy data is a rich and interesting source of information.  Additional work should be done to dig deeper into differences between subscribers and non-subscribers. Looking at usage by the hour but also breaking it down my day of the week would be a good next step.  Ridership among users may look different on weekends compared to use during the week and it may even differ by subscriber status.  Additionally, where are rides concluding?  This work examined where rides originate but analysis ion destination would also be useful.</p>
 
 
 
