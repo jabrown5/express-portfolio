@@ -1,84 +1,201 @@
-{{!-- ---
-title: "NFL Arrest data: 2001-2016"
-date: 2016-12-15
-blurb: My first exercise in learning D3 was to visualize the arrests of NFL players by offense, team, and time.  I used publicly available data housed at http://nflarrest.com/api/.
-thumbnail: "../images/nfl-arrests-thumb.png"
-
---- --}}
-
-<style>
-    .bar{
-        fill: steelblue;
-    }
-    .bar:hover{
-        fill: brown;
-    }
-    .axis {
-        font: 10px sans-serif;
-    }
-    .axis path,
-    .axis line {
-        fill: none;
-        stroke: #000;
-        shape-rendering: crispEdges;
-    }
-    .axis--x path {
-        display: none;
-    }
-    .line {
-        fill: none;
-        stroke: steelblue;
-        stroke-width: 1.5px;
-    }
-</style>
-
-
 <div style="margin-left:5%; margin-right:5%">
 
 
-    <h4><b>NFL Arrest Data: 2001 - 2016 (In Progress)</b></h4>
-
-    <h6><em>Summary</em></h6>
-
-    <p>After coming across a publically available API containing arrest data of NFL players from January 31, 2001 to January 31, 2016, I was interested in looking at these data just for fun! </p>
-
-    <p>The data show that DUI or Driving Under the Influence is the most common offense for arrest.  The NFL franchise with the most arrests was the  Minnesota Vikings with player Mryant McKinnie leading the Vikings with the most arrests</p>
-
-    <h6><em>Tools used</em></h6>
-    <ul>
-        <li>HTML, CSS</li>
-        <li>D3.js</li>
-    </ul>
-
-    <h6><em>Find the original source data</em></h6>
-    <ul>
-        <li><a href="http://nflarrest.com/api/">http://nflarrest.com/api/</a></li>  
-    </ul>
+    <h4><b>Arrests of NFL Players: 2001-2016</b></h4>
 
     <br>
 
 
-<h6><em>Most Common Offense</em></h6>
-<div id="viz1"></div>
-<p></p>
+    <h5><b>Introduction</b></h5>
+    <p>The purpose of this project is to take a cursory look at arrest data of American National Football League players from 2001 to 2016.  Using publically available arrest data from an NFL arrest API, a handful of criminal behaviors, arrests over time, and arrests by Team were compared.  Findings indicate differences between frequency of occurrence by crimes and team.</p>
 
 
-<h6><em>Arrests by Franchise</em></h6>
-<div id="viz2"></div>
 
-<h6><em>Number of Arrests by Minnesota Vikings Player</em></h6>
-<div id="viz3"></div>
+    <h5><b>Methodology and Data</b></h5>
+
+    <p>This section will discuss the NFL Arrest API data, how the data was modified for analyses, and limitations to the data.</p>
 
 
-{{!-- <div id="viz4"></div>
- --}}
+    <h6><b><em>NFLArrest.com</em></b></h6>
 
-    <h6><em>Caveats</em></h6>
+    <p>The data for this project was courtesy of the nflarrest.com API, a website that tracks arrests of NFL players. This site collects data on every single arrest including the crime or crimes reported, the player arrested and the team they play for, and number of crimes per month.  These data include offenses occurring during and between January 31, 2001 to mid-2016.  While these data include a large quantity of detailed information, this project focused on the aggregate number of arrests and arrests by team.  This data is available only in a json format and was collected from the nflarrest.com website.</p>
 
-    <p>Please remember that this is only arrest data and should not be considered the definitive word on criminal activity among NFL players. It is possible that an arrest never resulted in any charges.  Additionally, some criminal activity is undetected so some crimes or players may go unreported.</p>
+
+    <ul>
+        <li><a href="http://nflarrest.com/api/">http://nflarrest.com/api/</a></li>  
+    </ul>
+
+
+
+    <h6><em>Cleaning and Compiling</em></h6>
+
+    <p>This rich source of data also provided some challenges.  Specifically, the data did not exist in a single, aggregate file.  Because of the specific needs of this project, data had to be manually combined from several json files into one complete excel file for cleaning purposes.</p>
+
+    <p>Arrests for each unique classification of crime were collected one by one as they only existed in separate files, the format was changed from json to csv, and then each was added to a single aggregate file.  Additionally, arrests for <em>all</em> crimes by month and year needed manual creation due to the fact that arrests across time only exists for unique crime types, for example, DUI.  This aggregate file was created by collecting each json file, converting it to a csv format, and then combining and cleaning via Excel.</p>
+
+
+
+    <h6><em>Collapsing the Data</em></h6>
+    
+    <p>The data comprised of a wide range of offenses ranging from criminal mischief to murder.  Offenses were also often co-occurring; for example, gun offenses would often co-occur with drug offenses.  Additionally, some offenses were qualitatively the same but were recorded differently.  An example of this would be “reckless driving, dui” and “dui, reckless driving”.  For cases with no qualitative difference like the example above, the counts for these were combined.</p>
+
+    <p>Upon examination, seven overarching themes to the arrest data appeared:  automobile related, cruelty and neglect, domestic and sexual offenses, drug/alcohol related, property offenses, general issues with law enforcement officers, and violent offenses.  Based on the type of offense, arrests were placed into one of these seven categories for simpler analyses.  For example, “murder” offenses were placed in the violence category.  For arrests where offenses co-occurred, the arrest was placed in one of the seven categories based on which offense was the most serious. As an example, a “drugs, license” offense was classified as an alcohol and drug related offense as “drugs” was considered the more serious of the two offenses.</p>
+
+
+    <p>Definitions:</p>
+
+    <ul>
+        <li>Drug and alcohol: arrests where the most serious offense was related to substance use</li> 
+        <li>Violence: arrests where the offense involved serious or potentially serious bodily harm to another individual</li> 
+        <li>General Issues with Law Enforcement:  arrests that often resulted directly as a by-product of contact with police officers</li> 
+        <li>Automobile Related:  arrests were an automobile was involved</li> 
+        <li>Property: crimes against personal property that resulted in arrest</li> 
+        <li>Domestic and Sexual: arrests as a result of sexual or physical harm against an intimate partner</li> 
+        <li>Cruelty and Neglect:  crimes related to general abuse and neglect of “weaker” parties specifically children and animals</li> 
+    </ul>
+
+    <p>See the offense grouping table further below for a complete list of unique offenses and how each was categorized.</p>
+    
+    <br>
+
+        <div class='tableauPlaceholder' id='viz1485982339263' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;NF&#47;NFLArrestProject&#47;AllArrests&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='NFLArrestProject&#47;AllArrests' /><param name='tabs' value='yes' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;NF&#47;NFLArrestProject&#47;AllArrests&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object>
+        </div>                
+        <script type='text/javascript'>                    
+            var divElement = document.getElementById('viz1485982339263');
+            var vizElement = divElement.getElementsByTagName('object')[0];
+            vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
+            var scriptElement = document.createElement('script');
+            scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+            vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+        </script>
+
+    <br>
+
+    <h6><em>Limitations</em></h6>
+
+    <p>It is important to note that these data only consist of arrests and should not be taken as an indicator of actual guilt.  Additionally, many crimes may go undetected for which no arrests can occur.</p>
+
+    <p>Lastly, the arrest data for 2016 is incomplete and only current up to and including November.  Any interpretations that include the year 2016 should be approached with caution.</p>
+
+
+
+    <h6><em>Methods</em></h6>
+    <p>Descriptive results are the primary focus of this study.  Using Tableau Public, basic descriptives including the number of crimes in each general category, the number of arrests for each team, and arrests across time were found and are illustrated below.</p>
+
+
+
+
+    <h5><b>Findings</b></h5>
+
+
+    <h6><b><em>Arrests by Offense</em></b></h6>
+
+    <p>The first descriptive (see below) shows offense categorizations and the corresponding number of offenses.  There are 356 drug and alcohol related offenses, 270 violent offenses, 97 general issues with law enforcement officer offenses, 39 automobile related offenses, 28 arrests for property crimes, 24 crimes of a domestic or sexual nature, and 13 arrests classified as cruelty and neglect.</p>
+
+    <br>
+
+
+        <div class='tableauPlaceholder' id='viz1485982159650' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;NF&#47;NFLArrestProject&#47;ArrestsxOffense2&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='NFLArrestProject&#47;ArrestsxOffense2' /><param name='tabs' value='yes' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;NF&#47;NFLArrestProject&#47;ArrestsxOffense2&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object>
+        </div>                
+        <script type='text/javascript'>
+            var divElement = document.getElementById('viz1485982159650');
+            var vizElement = divElement.getElementsByTagName('object')[0];
+            vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
+            var scriptElement = document.createElement('script');
+            scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+            vizElement.parentNode.insertBefore(scriptElement, vizElement);
+        </script>
+
+
+    <br>
+
+
+    <h6><b><em>Arrests by Year</em></b></h6>
+
+    <p>The next descriptive plots the arrests, starting in 2001, for each year.  There is some variability in the yearly arrest tally with 2006 seeing a high of 71 arrests followed by 68 arrests in 2008. While 2016 appears to have the fewest arrests with 21, it is important to note that the data is considered incomplete for 2016.  Therefore, 2015 is considered the year with the lowest number of arrests with 35 occurring.</p>
+
+
+    <br>
+
+        <div class='tableauPlaceholder' id='viz1485982198275' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;NF&#47;NFLArrestProject&#47;ArrestsxYear&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='NFLArrestProject&#47;ArrestsxYear' /><param name='tabs' value='yes' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;NF&#47;NFLArrestProject&#47;ArrestsxYear&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object>
+        </div>                
+        <script type='text/javascript'>
+            var divElement = document.getElementById('viz1485982198275');
+            var vizElement = divElement.getElementsByTagName('object')[0];
+            vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
+            var scriptElement = document.createElement('script');
+            scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+            vizElement.parentNode.insertBefore(scriptElement, vizElement);
+        </script>
+
+
+    <br>
+
+
+    <h6><b><em>Arrests by Month</em></b></h6>
+    <p>The chart below plots the aggregate monthly number of arrests.  Arrest for each month across all years was combined.  There is a spike in arrests from January to February, theorized to be a result of the end of the regular football season.  A dip in arrests occurs in April with another spike immediately after.  Beginning again in August, arrests dip to the lowest total across the year with 53 arrests recorded. This trend continues to the end of the year.  Opposite to the dramatic increase in arrests from January to February, this dip is believed to coincide with the start of the football season with team training camps followed by pre-season games and then kickoff of the regular season schedule.</p>
+
+    <p>The first chart below includes monthly totals for all years and is the basis for the finding above.  The second chart breaks down the information further and allows a look at each month within each year.</p>
+
+<br>
+
+        <div class='tableauPlaceholder' id='viz1485982227129' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;NF&#47;NFLArrestProject&#47;ArrestsxMonth&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='NFLArrestProject&#47;ArrestsxMonth' /><param name='tabs' value='yes' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;NF&#47;NFLArrestProject&#47;ArrestsxMonth&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object>
+        </div>                
+        <script type='text/javascript'>
+            var divElement = document.getElementById('viz1485982227129');
+            var vizElement = divElement.getElementsByTagName('object')[0];
+            vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
+            var scriptElement = document.createElement('script');
+            scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+            vizElement.parentNode.insertBefore(scriptElement, vizElement);
+        </script>
+
+<br>
+
+        <div class='tableauPlaceholder' id='viz1485982272384' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;NF&#47;NFLArrestProject&#47;ArrestsxMonthxYear1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='NFLArrestProject&#47;ArrestsxMonthxYear1' /><param name='tabs' value='yes' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;NF&#47;NFLArrestProject&#47;ArrestsxMonthxYear1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object>
+        </div>                
+        <script type='text/javascript'>
+            var divElement = document.getElementById('viz1485982272384');
+            var vizElement = divElement.getElementsByTagName('object')[0];
+            vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
+            var scriptElement = document.createElement('script');
+            scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+            vizElement.parentNode.insertBefore(scriptElement, vizElement);
+        </script>
+
+<br>
+
+    <h6><b><em>Arrests by Team</em></b></h6>
+
+    <p>The map below plots each team and their arrest totals.  The larger the circle, the greater the number of corresponding arrests.  The Minnesota Vikings lead teams with the most arrests at 49.  The Houston Texans have the fewest arrests with 13; however, it is important to remember that this franchise was not active until 2002; one year after the data began being collected.  The New York Giants have been active since data collection began and have a total of 14 arrests.</p>
+
+    <p>It is also important to note that seven arrests are not affiliated with any team as the arrested individuals were free-agents at the time of arrest.</p>
+
+<br>
+
+        <div class='tableauPlaceholder' id='viz1485982306615' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;NF&#47;NFLArrestProject&#47;ArrestsxTeam&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='NFLArrestProject&#47;ArrestsxTeam' /><param name='tabs' value='yes' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;NF&#47;NFLArrestProject&#47;ArrestsxTeam&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object>
+        </div>                
+        <script type='text/javascript'>                    
+            var divElement = document.getElementById('viz1485982306615');
+            var vizElement = divElement.getElementsByTagName('object')[0];
+            vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
+            var scriptElement = document.createElement('script');
+            scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+            vizElement.parentNode.insertBefore(scriptElement, vizElement);
+        </script>
+
+
+    <br>
+
+    <h5><b>Conclusions</b></h5>
+
+    <p>In sum, the descriptive analyses show a range in arrest data; from a wide range in arrests by team to the type of offense to fluctuations across time. Drug and alcohol related offenses constituted the majority of arrests by type while the Minnesota Vikings were the team leading the league in number of arrests.  Relative to time, arrests declined with the start of training camp and continued to remain low during the pre and regular seasons.</p>
+
+
+
+    <h5><b>Next Steps</b></h5>
+
+    <p>While the findings presented here are fun and informational, the applicability and usefulness appears limited.  Proposed next steps to improve the informative ability of the data would be to compare these arrest data to the general population of males of the same age during similar time frames.  With the findings as they are, it is not known if we should be troubled by these numbers.  Only with a comparison can we say that NFL players have more arrests than a similar sample of males from the general population and so be troubled.  Conversely, NFL players may have lower arrest rates when compared to the general population and if that is the case, these players should be encouraged to continue this pattern.</p>
+
 
 </div>
-
-
-<script src="https://d3js.org/d3.v3.js"></script>
-<script type="text/javascript" src="../javascripts/app.js"></script>
