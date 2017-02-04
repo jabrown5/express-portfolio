@@ -42,6 +42,11 @@ router.get('/divvy-gender', function(req, res, next) {
     res.render('divvy-gender', { });
 });
 
+router.get('/ga-job-fair', function(req, res, next) {
+    res.render('ga-job-fair', { });
+});
+
+
 
 router.get('/nfl-arrests', function(req, res, next) {
     res.render('nfl-arrests', { });
